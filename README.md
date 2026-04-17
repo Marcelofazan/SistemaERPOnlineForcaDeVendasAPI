@@ -1,4 +1,4 @@
-# SistemaERPOnlineForcaDeVendasAPI
+# WebAPI-AspNetCore-EF10-JWT-SQLite
 
 Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
 
