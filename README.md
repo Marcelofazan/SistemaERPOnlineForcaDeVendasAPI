@@ -14,7 +14,7 @@ Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autori
 No Visual Studio Abra (Ferramentas) > (Gerenciador de Pacotes NuGet) > (Console do Gerenciador de Pacotes Nuget)  
 Necessário para Atualizar o Depurador com a Solução. 
 
-OBS: Certificar em Definir o Projeto Padrão como (SistemaERPOnlineForcaDeVendasAPI.WebAPI) e o nome da pasta raiz seja **(SistemaERPOnlineForcaDeVendasAPI)**, não pode haver **(-main)** no nome da pasta
+Certificar em Definir o Projeto Padrão como (SistemaERPOnlineForcaDeVendasAPI.WebAPI)
 
 * Instalar pacotes necessários (Obrigatório)
 ```bash
