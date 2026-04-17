@@ -1,4 +1,4 @@
-# API-JWT-NET10-SQLite
+# SistemaERPOnlineForcaDeVendasAPI
 
 Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
 
@@ -48,10 +48,7 @@ Após o Migrations, executa a aplicação **https://localhost:7092/Swagger/index
 O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do projeto na primeira execução.
 
 
-
-
-## Execução Inicial de Endpoints
-
+## Execução Inicial de Endpoints (Postman)
 
 1 - Registrar usuário
 Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
@@ -65,7 +62,6 @@ Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar 
     		"taxapercentual": 10.00
 	}
    ```
-
 
 2 - Fazer Login
 Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
@@ -90,8 +86,7 @@ Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Gui
 
 ```
 
-
-#Exemplo de EndPoint Criar produtos:
+##Exemplo de EndPoint Criar produtos:
 
 Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
@@ -107,13 +102,13 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 	}
    ```
 
-#Health
+###Health
 
 5 - Health Checar o servidor – Estado da API e da base de dados (útil para monitorização e orquestração).
 GET http://localhost:7092/health 
 
 
-### Testes
+## Testes
 
 ```bash
         dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
