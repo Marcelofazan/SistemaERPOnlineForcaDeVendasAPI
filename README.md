@@ -50,7 +50,7 @@ O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do proj
 
 ## Execução Inicial de Endpoints (Postman)
 
-1 - Registrar usuário
+**(Registrar usuário)**
 Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
@@ -63,7 +63,7 @@ Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar 
 	}
    ```
 
-2 - Fazer Login
+**(Fazer Login)**
 Enviar POST / Usuario: **https://localhost:7092/api/auth/login**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
 
    ```json
