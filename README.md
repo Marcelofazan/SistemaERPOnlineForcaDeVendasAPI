@@ -2,7 +2,7 @@
 
 Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
 
-# O que você vai encontrar neste projeto
+## O que você vai encontrar neste projeto
 
 - **JWT** - Implementação de autenticação e autorização em WebAPI
 - **EF Core** - EntityFramework com utilização de Code First 
@@ -48,7 +48,7 @@ Após o Migrations, executa a aplicação **https://localhost:7092/Swagger/index
 O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do projeto na primeira execução.
 
 
-## Execução Inicial de Endpoints (Postman)
+### Execução Inicial de Endpoints (Postman)
 
 **(1 -Registrar usuário)**
 - Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
@@ -109,14 +109,14 @@ GET http://localhost:7092/health
 
 ```
 
-## Executar Testes Unitários (Developer PowerShell)
+##@ Executar Testes Unitários (Developer PowerShell)
 ```bash
         dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
 
-Os testes cobrem a camada **Aplicacao** (serviços de Produtos), com mocks dos repositórios.
+Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos repositórios.
 
-## Configuração
+##@ Configuração
 - **Banco:** SQLite, arquivo `SistemaERPOnlineForcaDeVendasAPI.db` na raiz do projeto (não versionado). Connection string em `appsettings.json` (`ConnectionStrings:DefaultConnection`).
 - **JWT:** Em `appsettings.json`, substitua `Jwt:Key` por uma chave segura com **mínimo 32 caracteres** (ou defina a variável de ambiente `Jwt__Key`). Em produção use sempre variáveis de ambiente ou User Secrets.
 
