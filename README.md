@@ -114,7 +114,7 @@ GET http://localhost:7092/health
         dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
 
-Os testes cobrem a camada **Aplicacao** (serviços de Projeto e Tarefa), com mocks dos repositórios.
+Os testes cobrem a camada **Aplicacao** (serviços de Produtos), com mocks dos repositórios.
 
 ## Configuração
 - **Banco:** SQLite, arquivo `SistemaERPOnlineForcaDeVendasAPI.db` na raiz do projeto (não versionado). Connection string em `appsettings.json` (`ConnectionStrings:DefaultConnection`).
