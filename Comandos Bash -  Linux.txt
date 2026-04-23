@@ -1,0 +1,41 @@
+# Bash
+
+Comandos para rodar no Bash do Linux 
+
+## Requesitos Necessários e Detalhes para Bash 
+
+```bash  
+	cd /home/vboxuser/Projetos/API-EF10-JWT-main/SistemaERPOnlineForcaDeVendasAPI.WebAPI
+
+	dotnet tool install --global dotnet-ef
+
+	dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+	dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
+
+## Efetuar Migrations pelo Bash 
+
+```bash 
+	cd /home/vboxuser/Projetos/API-EF10-JWT-main/
+
+	dotnet add SistemaERPOnlineForcaDeVendasAPI.WebAPI package Microsoft.EntityFrameworkCore.Design
+
+	dotnet ef migrations add InitialCreate --project InfraEstrutura --startup-project SistemaERPOnlineForcaDeVendasAPI.WebAPI
+```
+
+
+## Executar o Projeto 
+
+```bash 
+	cd /home/vboxuser/Projetos/API-EF10-JWT-main/SistemaERPOnlineForcaDeVendasAPI.WebAPI
+
+	dotnet run 
+```
+
+# Erro de SSL não criptografado no Linux (SSL_ERROR_RX_RECORD_TOO_LONG) alterar:
+
+```bash
+	https:// por http://
+```
