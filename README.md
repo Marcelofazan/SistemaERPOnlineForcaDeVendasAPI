@@ -1,15 +1,15 @@
-# WebAPI-AspNetCore-EF10-JWT-SQLite
+### WebAPI-AspNetCore-EF10-JWT-SQLite
 
 Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
 
-## O que você vai encontrar neste projeto
+### O que você vai encontrar neste projeto
 
 - **JWT** - Implementação de autenticação e autorização em WebAPI
 - **EF Core** - EntityFramework com utilização de Code First 
 - **Injeção de Dependência** - Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários
 - **Testes Unitários** - Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários
 
-## Requisitos e Detalhe do uso de EntityFrameworkCore 10
+#### Requisitos e Detalhe do uso de EntityFrameworkCore 10
 
 No Visual Studio Abra (Ferramentas) > (Gerenciador de Pacotes NuGet) > (Console do Gerenciador de Pacotes Nuget)  
 Necessário para Atualizar o Depurador com a Solução. 
@@ -41,14 +41,14 @@ Certificar em Definir o Projeto Padrão como (SistemaERPOnlineForcaDeVendasAPI.W
 
 ```
 
-### Execução da aplicação
+#### Execução da aplicação
 
 Após o Migrations, executa a aplicação **https://localhost:7092/Swagger/index.html** (ou na porta exibida no terminal). 
 
 O banco SQLite (`SistemaERPOnlineForcaDeVendasAPI.db`) é criado na raiz do projeto na primeira execução.
 
 
-### Execução Inicial de Endpoints (Postman)
+#### Execução Inicial de Endpoints (Postman)
 
 **(1 -Registrar usuário)**
 - Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
@@ -91,13 +91,13 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 	}
    ```
 
-### Health
+#### Health
 
 Health Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
 GET http://localhost:7092/health 
 
 
-### Rotas dos métodos e funções
+#### Rotas dos métodos e funções
 ```bash
 ...
 	Metodo: POST /api/auth/registro            Função: Registo de novo admin                JWT: Não 
@@ -109,14 +109,14 @@ GET http://localhost:7092/health
 
 ```
 
-##@ Executar Testes Unitários (Developer PowerShell)
+#### Executar Testes Unitários (Developer PowerShell)
 ```bash
         dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
 
 Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos repositórios.
 
-##@ Configuração
+#### Configuração
 - **Banco:** SQLite, arquivo `SistemaERPOnlineForcaDeVendasAPI.db` na raiz do projeto (não versionado). Connection string em `appsettings.json` (`ConnectionStrings:DefaultConnection`).
 - **JWT:** Em `appsettings.json`, substitua `Jwt:Key` por uma chave segura com **mínimo 32 caracteres** (ou defina a variável de ambiente `Jwt__Key`). Em produção use sempre variáveis de ambiente ou User Secrets.
 
